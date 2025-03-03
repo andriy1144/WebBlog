@@ -1,5 +1,43 @@
 <%- include("partials/header.ejs") %>
 
+<header>
+    <div>
+        <h1 class="main-title">IBlogs</h1>
+        <h3 class="features">
+            <span class="create">Create.</span>
+            <span class="read">Read.</span> 
+            <span class="create">Edit</span>
+        </h3>
+        <p class="main-description">
+            Personal writing space for your blogs. 
+            Create what you want, read what you need and manage it like you want. 
+        </p>
+        <a href="" class="create-button">Create</a>
+    </div>
+</header>
+<section id="posts">
+    <div class="container">
+        <h2 class="container-title">Your posts:</h2>
+        <hr/>
+        <!-- POSTS -->
+        <div class="post-container">
+            <div class="post">
+                <div class="post-title-container">
+                    <a href="#"><h3 class="post-title">Post title</h3></a>
+                    <p class="date-of-publish">dd-mm-yyyy</p>
+                </div>
+                
+                <p class="post-content">
+                    Post body: Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, but also the leap into electronic typesetting.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <h1>Hello Node.js</h1>
 
 <%- include("partials/footer.ejs") %>
