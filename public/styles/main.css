@@ -2,7 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 30px;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -77,18 +80,39 @@ nav{
 .nav-link{
     color:var(--white-font-color);
     font-size: 1.6em;
+    transition: all 0.3s ease-in-out;
 }
 .logo{
     font-size:3em;
     font-weight: bold;
 }
-
-
+.nav-link:not(.logo):after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: relative;
+    left: 50%;
+    top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:not(.logo):hover:after{
+    width: 100%;
+    left: 0;
+}
+.nav-link:hover{
+    color: lightgray;   
+}
+.logo:hover{
+    scale: 1.1;
+}
 /* HEADER STYLES */
 header{
     height: 90vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -138,7 +162,7 @@ header{
 .create-button{
     min-height: 60px;
     width: 225px;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,16 +170,49 @@ header{
     background-color: var(--dark-purple-color);
     border-radius: 15px;
     font-size: 40px;
+    transition: all 0.3s ease-in-out;
 }
-
-
+.create-button:hover{
+    scale: 1.1;
+    background-color: var(--red-color);
+}
+.arrow-svg{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: var(--red-color);
+    animation: arrow-jump 2s infinite;
+    position: relative;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.arrow-svg:hover{
+    background-color:#522546;
+}
+@keyframes arrow-jump {
+    0%{
+        top:-20px;
+        opacity: 0.5;
+    }
+    50%{
+        top:0px;
+        opacity: 1;
+    }
+    100%{
+        top:-20px;
+        opacity: 0.5;
+    }
+    
+}
 /* MAIN-BODY STYLES */
 .container{
     width: 70%;
     margin: 0 auto;
     font-family: var(--basic-font);
 }
-
+#posts{
+    height: 100vh;
+}
 .container-title{
     font-size: 48px;
     padding: 0 0 10px 20px;
@@ -170,7 +227,6 @@ header{
 .post-container{
     margin-top: 20px;
 }
-
 .post{
     padding: 20px 70px 30px 30px;
     color: var(--white-font-color);
