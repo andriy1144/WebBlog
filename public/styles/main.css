@@ -300,6 +300,17 @@ header{
     width: 600px;
     color:whitesmoke;
     padding: 25px;
+
+    position: relative;
+    top: -20px;
+    opacity: 0;
+    animation: form-appear 1s ease forwards;
+}
+@keyframes form-appear {
+    to{
+        top: 0;
+        opacity: 1;
+    }
 }
 
 .create-container > h2{
@@ -347,5 +358,12 @@ header{
     font-weight: bold;
     cursor: pointer;
     align-self: flex-end;
-    margin-top: 10px;
+}
+
+.error{
+    margin-left: 10px;
+    color:orange;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
