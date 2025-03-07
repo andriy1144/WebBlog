@@ -12,7 +12,7 @@
             Personal writing space for your blogs. <br>
             Create what you want, read what you need and manage it like you want. 
         </p>
-        <a href="#" class="create-button">Create</a>
+        <a href="/create" class="create-button">Create</a>
 
     </div>
     <a id="arrow" href="#posts"><svg class="arrow-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="Keyboard-Double-Arrow-Down--Streamline-Outlined-Material" height="24" width="24"><desc>Keyboard Double Arrow Down Streamline Icon: https://streamlinehq.com</desc><g id="keyboard-double-arrow-down"><path id="Vector" d="M12 19 6 13l1.05 -1.05 4.95 4.95 4.95 -4.95L18 13 12 19Zm0 -6.325 -6 -6 1.05 -1.05 4.95 4.95 4.95 -4.95 1.05 1.05 -6 6Z" fill="#E23E57" stroke-width="0.5"></path></g></svg></a>
@@ -22,21 +22,22 @@
         <h2 class="container-title">Your posts:</h2>
         <hr color="#522546" size="1"/>
         <!-- POSTS -->
-        <div class="post-container">
-            <div class="post">
-                <div class="post-title-container">
-                    <h3 class="post-title"><a href="#">Post title</a></h3>
-                    <p class="date-of-publish">dd-mm-yyyy</p>
+        <% if(locals.posts) { %>
+            <div class="post-container">
+                <% posts.forEach(post => { %>
+                <div class="post">
+                    <div class="post-title-container">
+                        <h3 class="post-title"><a href="#"><%= post.title %></a></h3>
+                        <p class="date-of-publish"><%= post.createdAt %></p>
+                    </div>
+                    
+                    <p class="post-content">
+                        <%= post.postBody %>
+                    </p>
                 </div>
-                
-                <p class="post-content">
-                    Post body: Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting.
-                </p>
+                <% }); %>
             </div>
-        </div>
+        <% } %>
     </div>
 </section>
 
