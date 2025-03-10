@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+    <section class="post-section">
+        <% if(locals.post) { %>
+            <h2 class="post-page-title"><%= post.title %></h2>
+            <hr color="#522546">
+            <p class="post-description"> <%= post.postBody %></p>
+        <% }else{  %>
+            <h2 class="post-page-title" style="color: red;">POST NOT FOUND</h2>
+        <% } %>
+    </section>
+
+<%- include("partials/footer.ejs") %>

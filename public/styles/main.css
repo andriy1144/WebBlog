@@ -367,3 +367,26 @@ header{
     margin: 0;
     padding: 0;
 }
+
+/* VIEW POST PAGE STYLES*/
+.post-section{
+    width: 70%;
+    margin: 60px auto;
+    font-family: var(--basic-font);
+}
+
+.post-page-title{
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--dark-purple-color);
+    margin: 20px 10px;
+}
+
+.post-description{
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.5em;
+    line-height: 1.5;
+}

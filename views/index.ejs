@@ -27,7 +27,7 @@
                 <% posts.forEach(post => { %>
                 <div class="post">
                     <div class="post-title-container">
-                        <h3 class="post-title"><a href="#"><%= post.title %></a></h3>
+                        <h3 class="post-title"><a href="<%= post.link %>"><%= post.title %></a></h3>
                         <p class="date-of-publish"><%= post.createdAt %></p>
                     </div>
                     
