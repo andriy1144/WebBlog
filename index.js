@@ -41,10 +41,14 @@ app.post("/create", (req,res) => {
 app.get("/posts/:postId", (req,res) => {
     const postId = req.params.postId - 1;
     if(postId < posts.length && postId >= 0){
-        res.render("view_post_page.ejs", {post: posts[postId]});
+        res.render("view_post_page.ejs", {post: posts[postId], postId: (postId + 1)});
     }else{
         res.render("view_post_page.ejs");
     }
+})
+
+app.get("/posts/:postId/edit", (req,res) => {
+    
 })
 
 app.listen(port, () => {

@@ -390,3 +390,39 @@ header{
     font-size: 1.5em;
     line-height: 1.5;
 }
+
+.post-headers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-headers > .date-of-publish{
+    font-weight: 400;
+}
+
+
+/* ACTION LINKS */
+.action-links{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    justify-content: flex-end
+}
+.edit-action, .delete-action{
+    width: 125px;
+    height: 30px;
+    color:var(--white-font-color);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.edit-action{
+    background-color: orange;
+}
+
+.delete-action{
+    background-color: #E23E57;
+}

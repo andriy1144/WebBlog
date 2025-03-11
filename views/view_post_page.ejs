@@ -2,9 +2,14 @@
 
     <section class="post-section">
         <% if(locals.post) { %>
-            <h2 class="post-page-title"><%= post.title %></h2>
+            <div class="post-headers"><h2 class="post-page-title"><%= post.title %></h2> <p class="date-of-publish"><%= post.createdAt  %></p></div>
             <hr color="#522546">
             <p class="post-description"> <%= post.postBody %></p>
+
+            <div class="action-links">
+                <a href="/posts/<%= postId %>/edit" class="edit-action">Edit</a>
+                <a href="/posts/<%= postId %>/delete" class="delete-action">Delete</a>
+            </div>
         <% }else{  %>
             <h2 class="post-page-title" style="color: red;">POST NOT FOUND</h2>
         <% } %>
