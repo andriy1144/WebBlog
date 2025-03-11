@@ -24,7 +24,12 @@ app.get("/", (req,res) =>{
 });
 
 app.get("/create", (req,res) => {
-    res.render("create_page.ejs");
+    res.render("form_page.ejs", 
+        {
+            formTitle: "Create post", 
+            formActionLink: "/create#posts",
+            btnValue: "Create"
+        });
 });
 app.post("/create", (req,res) => {
     const newPost = {
@@ -48,6 +53,33 @@ app.get("/posts/:postId", (req,res) => {
 })
 
 app.get("/posts/:postId/edit", (req,res) => {
+    const postId = req.params.postId - 1;
+    if(postId < posts.length && postId >= 0){
+        const post = posts[postId];
+        res.render("form_page.ejs", 
+            {
+                formTitle: "Edit post", 
+                formActionLink: `/posts/${postId+ 1}/edit`,
+                btnValue: "Edit",
+                postTitleData: post.title,
+                postBodyData: post.postBody
+            });
+    }else{
+        res.redirect("/");
+    }
+})
+
+app.post("/posts/:postId/edit", (req,res) => {
+    const postId = req.params.postId - 1;
+    
+    const post = posts[postId];
+    post.postBody = req.body.postBody;
+    post.title = req.body.postTitle;
+
+    res.redirect("/#posts");
+})
+
+app.get("/posts/:postId/delete", (req,res) => {
     
 })
 
