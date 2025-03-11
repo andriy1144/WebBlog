@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<section class="create-main-container">
+    <div class="create-container">
+        <h2><%= formTitle %></h2>
+        <form action="<%= formActionLink %>" method="post" onsubmit="return validateForm(this)">
+            <label id="postTitleLabel" for="post-title">Post title: </label>
+            <% if(locals.postTitleData) { %>
+                <input type="text" id="postTitle" name="postTitle" value="<%= postTitleData %>">
+            <% }else{ %>
+                <input type="text" id="postTitle" name="postTitle">
+            <% } %>
+
+            <label id="postBodyLabel" for="post-body">Post body: </label>
+            <% if(locals.postBodyData) { %>
+                <textarea id="postBody" name="postBody" ><%= postBodyData  %></textarea>
+            <% } else { %>
+                <textarea id="postBody" name="postBody"></textarea>
+            <% } %>
+            <p class="error"></p>
+            <input type="submit" value="<%= btnValue %>">
+        </form>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
