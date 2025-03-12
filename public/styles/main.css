@@ -425,4 +425,85 @@ header{
 
 .delete-action{
     background-color: #E23E57;
+    cursor: pointer;
+}
+
+/* MODAL WINDOW STYLES */
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    font-family: var(--basic-font);
+    animation: appear-modal-container 1s ease forwards;
+}
+
+@keyframes appear-modal-container {
+    to{
+        opacity: 1;
+    }
+}
+
+.modal-content{
+    background-color: whitesmoke;
+    border-radius: 25px;
+    height: 150px;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+    animation: appear-modal-content 0.5s ease forwards;
+}
+
+@keyframes appear-modal-content {
+    from{
+        top:-10px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.modal-title{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.modal-buttons{
+    display: flex;
+    justify-content: space-evenly; 
+    margin-top: 30px;
+}
+
+#approve-modal, #decline-modal{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size:1.5em;
+    font-weight: bold;
+}
+
+#approve-modal{
+    background-color: var(--red-color);
+}
+#decline-modal{
+    background-color: var(--dark-blue-color);
+}
+
+.hidden{
+    display: none;
 }

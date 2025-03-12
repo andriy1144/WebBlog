@@ -19,6 +19,10 @@ function getFormattedDate(){
     return new Date().toLocaleString();
 }
 
+function isPostExists(postId){
+    return (postId < posts.length && postId >= 0) && posts[postId] != undefined
+}
+
 app.get("/", (req,res) =>{
     res.render("index.ejs", {posts: posts});
 });
@@ -45,7 +49,7 @@ app.post("/create", (req,res) => {
 
 app.get("/posts/:postId", (req,res) => {
     const postId = req.params.postId - 1;
-    if(postId < posts.length && postId >= 0){
+    if(isPostExists(postId)){
         res.render("view_post_page.ejs", {post: posts[postId], postId: (postId + 1)});
     }else{
         res.render("view_post_page.ejs");
@@ -54,7 +58,7 @@ app.get("/posts/:postId", (req,res) => {
 
 app.get("/posts/:postId/edit", (req,res) => {
     const postId = req.params.postId - 1;
-    if(postId < posts.length && postId >= 0){
+    if(isPostExists(postId)){
         const post = posts[postId];
         res.render("form_page.ejs", 
             {
@@ -80,7 +84,9 @@ app.post("/posts/:postId/edit", (req,res) => {
 })
 
 app.get("/posts/:postId/delete", (req,res) => {
-    
+    const postId = req.params.postId - 1;
+    if(isPostExists(postId)) delete posts[postId];
+    res.redirect("/#posts");
 })
 
 app.listen(port, () => {
