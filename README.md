@@ -7,5 +7,6 @@ This web site was developed as a training project for Node.js, Express.js and EJ
 ___
 
 ## TO-DO tasks:
-- [ ] Improve UI appearance(animations, more styling etc...)
-- [ ] Test application to find all possible bugs
+- [ ] Improve UI appearance(animations, more styling etc...).
+- [ ] Test application to find all possible bugs.
+- [ ] Add "About" page!
