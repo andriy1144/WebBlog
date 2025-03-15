@@ -54,7 +54,7 @@ app.get("/posts/:postId", (req,res) => {
     }else{
         res.render("view_post_page.ejs");
     }
-})
+});
 
 app.get("/posts/:postId/edit", (req,res) => {
     const postId = req.params.postId - 1;
@@ -71,7 +71,7 @@ app.get("/posts/:postId/edit", (req,res) => {
     }else{
         res.redirect("/");
     }
-})
+});
 
 app.post("/posts/:postId/edit", (req,res) => {
     const postId = req.params.postId - 1;
@@ -81,13 +81,18 @@ app.post("/posts/:postId/edit", (req,res) => {
     post.title = req.body.postTitle;
 
     res.redirect("/#posts");
-})
+});
 
 app.get("/posts/:postId/delete", (req,res) => {
     const postId = req.params.postId - 1;
     if(isPostExists(postId)) delete posts[postId];
     res.redirect("/#posts");
-})
+});
+
+
+app.get("/about", (req,res) => {
+    res.render("about.ejs");
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

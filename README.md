@@ -9,4 +9,5 @@ ___
 ## TO-DO tasks:
 - [ ] Improve UI appearance(animations, more styling etc...).
 - [ ] Test application to find all possible bugs.
-- [ ] Add "About" page!
+- [X] Add "About" page!
+- [ ] Fix the footer!
