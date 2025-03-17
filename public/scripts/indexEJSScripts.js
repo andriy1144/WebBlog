@@ -19,4 +19,12 @@ addEventListener("scroll", () => {
     }else{
         document.querySelector("#arrow").classList.remove("dissappear")
     }
+
+    if(window.scrollY >= 600){
+        document.querySelector(".arrow-up").classList.add("appear");
+    }else{
+        document.querySelector(".arrow-up").classList.remove("appear");
+    }
+
+    console.log(window.scrollY);
 })

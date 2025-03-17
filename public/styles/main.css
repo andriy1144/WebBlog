@@ -618,3 +618,27 @@ footer{
     font-weight: bold;
     margin-top:15px;
 }
+
+/* ARROW UP */
+.appear{
+    opacity: 1 !important;
+    transition: opacity 0.3s ease-in-out;
+}
+.arrow-up{
+    opacity: 0;
+    position: fixed;
+    top: 86vh;
+    right: 60px;
+    background: var(--dark-blue-color);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.arrow-up:hover{
+    background: #522546;
+    scale: 1.05;
+}
+
+.arrow-up .arrow-svg{
+    transform: rotate(180deg);
+    animation: none;
+}
