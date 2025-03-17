@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    min-height: 100%;
 }
 a{
     text-decoration: none;
@@ -217,7 +218,9 @@ header{
     font-family: var(--basic-font);
 }
 #posts{
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    margin-bottom: 200px;
 }
 .container-title{
     font-size: 48px;
@@ -410,6 +413,8 @@ header{
 /* VIEW POST PAGE STYLES*/
 .post-section{
     width: 70%;
+    height: 100%;
+    min-height: 100vh;
     margin: 60px auto;
     font-family: var(--basic-font);
 }
@@ -550,10 +555,66 @@ header{
 /* ABOUT SECTION */
 #about{
     margin-top: 50px;
+    min-height: 80vh;
+    height: 100%;
 }
 .about-content{
     margin-top: 20px;
     text-align: justify;
     font-weight: bold;
     line-height: 2;
+}
+
+
+/* FOOTER STYLES */
+footer{
+    clear: both;
+    height: 150px;
+    background: linear-gradient(-45deg, var(--dark-blue-color), var(--dark-purple-color), var(--dark-red-color),var(--red-color));
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.footer-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    font-family: var(--basic-font);
+}
+.footer-container li{
+    list-style: none;
+}
+.footer-title{
+    color:var(--white-font-color);
+    font-size: 1.5em;
+    margin-bottom:20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    font-size:14px;
+    font-weight: bold;
+    margin-top:15px;
 }
