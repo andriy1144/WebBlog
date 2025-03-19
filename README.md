@@ -10,4 +10,4 @@ ___
 - [ ] Improve UI appearance(animations, more styling etc...).
 - [ ] Test application to find all possible bugs.
 - [X] Add "About" page!
-- [ ] Fix the footer!
+- [X] Fix the footer!
