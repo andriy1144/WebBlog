@@ -622,10 +622,11 @@ footer{
 /* ARROW UP */
 .appear{
     opacity: 1 !important;
-    transition: opacity 0.3s ease-in-out;
+    scale: 1 !important;
 }
 .arrow-up{
     opacity: 0;
+    scale: 0;
     position: fixed;
     top: 86vh;
     right: 60px;
