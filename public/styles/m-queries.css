@@ -1,0 +1,63 @@
+@media (max-width: 920px) {
+    .main-title{
+        font-size: 3em;
+    }
+    .features{
+        font-size:5em;
+    }
+    .main-description{
+        font-size:18px;
+    }
+    .create-button{
+        min-height: 50px;
+        margin-top:30px;
+        width: 150px;
+        font-size:20px;
+    }
+
+    .arrow-svg{
+        width: 70px;
+        height: 70px;
+    }
+
+    .container, #about{
+        width: 90%;
+    }
+}
+
+@media (max-width: 655px) {
+    .container-title{
+        font-size:36px;
+    }
+    .post-title{
+        font-size: 30px;
+    }
+    .post-content{
+        font-size:12px;
+    }
+    .footer-title{
+        font-size:1em;
+    }
+    .footer-nav{
+        font-size:10px;
+    }
+}
+@media (max-width: 550px) {
+    .post-title-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    nav > a{
+        display: none;
+    }
+    .post{
+        padding: 20px;
+        text-align: center;
+    }
+    .create,.read,.edit{
+        filter: none;
+    }
+}

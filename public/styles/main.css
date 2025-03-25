@@ -351,7 +351,8 @@ header{
 
 /* CREATE PAGE STYLES */
 .create-main-container{
-    height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -693,4 +694,13 @@ footer{
 .arrow-up .arrow-svg{
     transform: rotate(180deg);
     animation: none;
+}
+
+/* MENU SYMBOL */
+.menu-icon{
+    width: 45px;
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    display: none;
 }
