@@ -41,6 +41,33 @@
     .footer-nav{
         font-size:10px;
     }
+    .create-container{
+        height: 450px;
+        width: 70%;
+    }
+    .create-container > h2{
+        font-size: 1.5em;
+    }
+    .create-container > form > label{
+        font-size: 1em;
+        margin: 0;
+    }
+    .create-container > form > input:not([type="submit"]){
+        width: 70%;
+        font-size: 18px;
+    }
+    .create-container > form > input[type="submit"]{
+        width: 70%;
+        align-self: center;
+    }
+    .create-container > form > textarea{
+        width: 70%;
+        font-size: 18px;
+    }
+    .create-container > form{
+        align-items: center;
+        margin-top: 30px;
+    }
 }
 @media (max-width: 550px) {
     .post-title-container{
@@ -59,5 +86,18 @@
     }
     .create,.read,.edit{
         filter: none;
+    }
+
+    .create-container > form > input:not([type="submit"]){
+        width: 100%;
+    }
+    .create-container > form > textarea{
+        width: 100%;
+    }
+    .create-container > form > input[type="submit"]{
+        width: 100%;
+    }
+    .create-container{
+        height: 400px;
     }
 }
