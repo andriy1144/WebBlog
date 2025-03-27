@@ -705,6 +705,21 @@ footer{
     display: none;
 }
 
+.menu-icon-animation{
+    animation: appear-menu-icon 0.3s ease-in forwards;
+}
+
+@keyframes appear-menu-icon {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* HIDDEN NAV */
 .hidden-nav{
     width: 100%;
