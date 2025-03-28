@@ -280,10 +280,25 @@ header{
         var(--dark-blue-color) 100%
     );
     border-radius: 15px;
-    /* max-height: 150px; */
     min-height: 100px;
     transition: all 0.3s ease-in-out;
+
+    animation: appearOnLoad linear;
+    animation-timeline: view(block 20% -10%);
+    animation-range: entry 0% cover 30%;
 }
+
+@keyframes appearOnLoad {
+    from{
+        opacity: 0;
+        scale: 1.2;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .post:hover{
     scale: 1.03;
     box-shadow: 10px 10px 5px lightgray;
