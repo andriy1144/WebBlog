@@ -1,6 +1,7 @@
 <%- include("partials/header.ejs") %>
 
     <section class="post-section">
+        <a href="/#posts" class="back-link"><img class="back-arrow-icon" src="/icons/up-arrow.svg" alt="up-arrow icon image"></a>
         <% if(locals.post) { %>
             <div class="post-headers"><h2 class="post-page-title"><%= post.title %></h2> <p class="date-of-publish"><%= post.createdAt  %></p></div>
             <hr color="#522546">

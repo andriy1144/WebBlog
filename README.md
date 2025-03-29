@@ -8,6 +8,6 @@ ___
 
 ## TO-DO tasks:
 - [X] Improve UI appearance(animations, more styling etc...).
-- [ ] Test application to find all possible bugs.
+- [X] Test application to find all possible bugs.
 - [X] Add "About" page!
 - [X] Fix the footer!

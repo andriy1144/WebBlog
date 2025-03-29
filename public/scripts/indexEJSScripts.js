@@ -3,10 +3,16 @@ function reduceLength(){
     document.querySelectorAll(".post-content").forEach((item) => {
         if(item.textContent.length >=510){
             const text = item.textContent;
-            item.textContent = text.substring(0,509) + "...";
+            item.textContent = text.substring(0,506) + "...";
         }
     });
-    console.log("Reduce func!");
+
+    document.querySelectorAll(".post-title > a").forEach(postTitle => {
+        if(postTitle.textContent.length >= 26){
+            const text = postTitle.textContent;
+            postTitle.textContent = text.substring(0,22) + '...';
+        }
+    });
 }
 
 window.onload = function(){
@@ -25,6 +31,4 @@ addEventListener("scroll", () => {
     }else{
         document.querySelector(".arrow-up").classList.remove("appear");
     }
-
-    console.log(window.scrollY);
 })
